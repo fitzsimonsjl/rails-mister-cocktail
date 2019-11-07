@@ -1,0 +1,28 @@
+ <h1><%= @cocktail.name %></h1>
+ <br>
+ <%= link_to "Back to all cocktails", root_path %>
+ <br>
+     <h3>Recipe</h3>
+
+     <br>
+
+     <h3>Add a few words about what you thought of this cocktail:</h3>
+
+     <br>
+
+     <table class="table table-bordered">
+       <body>
+           <th>Ingredient</th>
+           <th>Description</th>
+           <th>Delete? (if applicable)</th>
+         <% @cocktail.doses.each do |dose| %>
+           <tr>
+             <td><%= dose.ingredient.name %></td>
+             <td><%= dose.description %></td>
+             <td>
+               <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+             </td>
+           </tr>
+         <% end %>
+         <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+     </table>
