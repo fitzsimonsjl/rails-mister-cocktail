@@ -1,8 +1,12 @@
+<div class="new-cocktail-container">
 <%= simple_form_for [@cocktail] do |f| %>
   <%= f.input :name %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+  <%= f.submit "Add cocktail", class: "btn btn-primary" %>
 <% end %>
+</div>
 
-<%= link_to 'Go back to all cocktails', @cocktail %>
+<div class= "back-to-all-cocktails-container">
+<%= link_to 'Back to all cocktails', @cocktail %>
+</div>
