@@ -1,10 +1,17 @@
 <nav class="navbar sticky-top navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <%= image_tag "martini-icon.jpg", alt: "alttext", width: "33", height: "33", class: "d-inline-block align-top"  %>
-    The Cocktail Book
-    <%= link_to "+ Add a new Cocktail",  new_cocktail_path, class: "btn btn-primary"%>
+    The Cocktail Collection
   </a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
 </nav>
+
+<div class="new-cocktail-btn">
+<%= link_to "+ Add a new Cocktail",  new_cocktail_path, class: "btn btn-primary"%>
+    </div>
 
 <br>
 <br>
