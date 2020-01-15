@@ -1,7 +1,9 @@
-<h3>Add a new dose</h3>
+<div class="add-dose-container">
+<h3>Add a new dose or ingredient</h3>
 
 <%= simple_form_for [cocktail, dose] do |f| %>
   <%= f.association :ingredient %>
   <%= f.input :description %>
-  <%= f.submit %>
+  </div>
+  <div class="submit-container"> <%= f.submit :submit %> </div>
 <% end %>
