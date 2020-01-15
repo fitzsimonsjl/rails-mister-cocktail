@@ -11,5 +11,19 @@
   display: flex;
   justify-content: center;
   position: relative;
+  margin-left: 15px;
   padding-top: 25px;
+}
+
+.add-dose-container {
+  display: flex; 
+  margin-left: 15px;
+  flex-direction: column;
+  position: relative;
+  width: 30%;
+}
+
+.submit-container {
+  display:flex;
+  margin-left: 15px;
 }
