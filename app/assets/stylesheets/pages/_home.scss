@@ -9,3 +9,23 @@
   padding-right: 15px;
 
 }
+
+.card {
+  border: none;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-back-to-cocktails {
+  display: flex;
+  justify-content: center;
+}

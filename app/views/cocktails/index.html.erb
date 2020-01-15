@@ -1,21 +1,17 @@
-<nav class="navbar sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <%= image_tag "martini-icon.jpg", alt: "alttext", width: "33", height: "33", class: "d-inline-block align-top"  %>
-    The Cocktail Collection
-  </a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
-
 <div class="new-cocktail-btn">
 <%= link_to "+ Add a new Cocktail",  new_cocktail_path, class: "btn btn-primary"%>
     </div>
 
 <br>
 <br>
+<% if !@search.present? %>
 <h5 style="text-align: center;"> <%= "#{@cocktails.count} cocktails added so far. Why not add another?" %>  </h5>
+<% else %>
+<h5 style="text-align: center;"> <%= "#{@cocktails.count} cocktail found for your search '#{@name}'" %>  </h5>
+<div class="search-back-to-cocktails">
+ <%= link_to "Back to all cocktails", root_path, class: "btn btn-success"%>
+ </div>
+<% end %>
 <br>
 
 <div class="container">
@@ -27,7 +23,7 @@
 
         <div class="card-body">
           <h6 class="card-title"> <%= cocktail.name %></h6>
-          <%= link_to "View cocktail", cocktail, class: "btn btn-secondary"%>
+          <div class="card-button"> <%= link_to "View cocktail", cocktail, class: "btn btn-secondary"%> </div>
         </div>
       </div>
       </div>

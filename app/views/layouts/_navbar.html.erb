@@ -1,0 +1,10 @@
+<nav class="navbar sticky-top navbar-light bg-light">
+     <div class="logo-and-name"> <%= link_to image_tag("martini-icon.jpg", alt: "The Cocktail Collection logo"), root_path, width: "33", height: "33", class: "navbar-brand"  %>
+   The Cocktail Collection</div>
+
+
+  <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :name, label: false, input_html: {value: ""} %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+<% end %>
+</nav>
