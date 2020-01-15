@@ -1,10 +1,12 @@
  <div class="show-container">
- 
- <h1><%= @cocktail.name %></h1>  
- 
- <%= link_to "Back to all cocktails", root_path %>
+
+ <h1><%= @cocktail.name %></h1>
+
+<div class="show-back-to-cocktails">
+ <%= link_to "Back to all cocktails", root_path, class: "btn btn-success"%>
+ </div>
  <br>
- 
+
      <h3>Recipe - Enter your own and be creative! <i class="fas fa-arrow-down"></i></h3>
   <br>
 
