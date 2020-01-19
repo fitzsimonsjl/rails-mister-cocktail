@@ -8,24 +8,49 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 333px;
+  height: 33px;
 }
 
 .navbar-brand {
   display: flex;
-  flex-direction: row;
-
-}
-
-.nav-name {
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-}
-
-.logo-and-name {
-  display: flex;
+  flex-direction: flex-start;
   position: relative;
-  flex-direction: row;
-  align-items: center;
+  // height: 30px;
+  // width: 30px;
+
 }
+
+.nav-name-logo {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: left;
+  width: 33px;
+  height: 33px;
+
+}
+
+// .nav-name {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: row;
+// }
+
+// // .logo-and-name {
+// //   display: flex;
+// //   position: relative;
+// //   flex-direction: row;
+// //   align-items: center;
+
+// // }
+
+// .navbar {
+//   height: 50px;
+// }
+
+// .navbar-container {
+// display: flex;
+// justify-content: space-between;
+// position: relative;
+// }
